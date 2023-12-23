@@ -4,7 +4,7 @@ type helloProp = {
 
 function Hello(props : helloProp) {
   return (
-    <div>Hello {props.names}</div>
+    <div>Hello-{props.names}</div>
   )
 }
 
