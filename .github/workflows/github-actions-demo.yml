@@ -10,16 +10,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
           node-version: "14"
 
       - name: Install markdown-toc
-        run: npm install markdown-toc
+        run: npm install -g markdown-toc
 
       - name: Update TOC
-        run: npx markdown-toc -i README.md
+        run: npx markdown-toc -i README.md --bullets "-"
 
       - name: Commit and push changes
         run: |
