@@ -68,6 +68,15 @@ describe("App", () => {
 - `.spec.js` or `.spec.jsx`
 - `__tests__` folder with .js or .jsx files
 
+#### Code Coverage
 
-
-
+- Jest provides a built-in code coverage tool that can be used to measure how much of your code is covered by tests. This can be useful for identifying areas of your code that are not being tested and improving test coverage.
+- To enable code coverage, run the following command:
+```
+npm test -- --coverage
+```
+- Types of coverage:
+  - Statement coverage - how many statements are executed
+  - Branch coverage - how many branches are executed
+  - Function coverage - 
+  - Line coverage
