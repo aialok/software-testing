@@ -32,3 +32,42 @@ npm test -- --watch
 ```
 - This will start Jest in watch mode and run all tests in the current directory. It will also watch for changes to any files in the current directory and rerun the tests whenever a file changes.
 
+#### Jest Filtering Tests
+
+- Jest provides a number of ways to filter tests. This can be useful when you want to run only a subset of tests or exclude certain tests from running.
+- To run only a subset of tests, you can use the -t flag followed by a regular expression that matches the names of the tests you want to run. For example:
+```
+npm test -- -t "should render a list of items"
+```
+- This will run only the tests that match the regular expression "should render a list of items". You can also use the -t flag to exclude certain tests from running. For example:
+```
+npm test -- -t "should not render a list of items"
+```
+- This will run all tests except for the ones that match the regular expression "should not render a list of items".
+
+#### Grouping Tests
+
+- Jest provides a number of ways to group tests. This can be useful when you want to run only a subset of tests or exclude certain tests from running.
+- Describe blocks can be used to group tests together. For example:
+```
+describe("App", () => {
+  it("should render a list of items", () => {
+    // ...
+  });
+
+  it("should not render a list of items", () => {
+    // ...
+  });
+});
+```
+
+#### Naming Conventions
+
+- Jest provides different naming convention to of files and folders. This can be useful when you want to run only a subset of tests or exclude certain tests from running.
+- `.test.js` or `.test.jsx`
+- `.spec.js` or `.spec.jsx`
+- `__tests__` folder with .js or .jsx files
+
+
+
+
