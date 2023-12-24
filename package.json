@@ -14,7 +14,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "npm run update-toc && git add README.md && git commit --amend --no-edit"
+      "pre-commit": "echo 'Running pre-commit' && npm run update-toc && git add README.md && git commit --amend --no-edit"
     }
   }
 }
