@@ -2,7 +2,7 @@
 
 <!-- toc -->
 
-- [Jest vs React Testing Library](#jest-vs-react-testing-library)
+- [Jest vs React Testing](#jest-vs-react-testing)
   - [Jest](#jest)
   - [React Testing Library](#react-testing-library)
 - [Test Driven Development](#test-driven-development)
@@ -15,7 +15,7 @@
 
 <!-- tocstop -->
 
-# Jest vs React Testing Library
+# Jest vs React Testing
 
 When it comes to testing React applications, two popular choices are Jest and React Testing Library. Here's a comparison between the two:
 
