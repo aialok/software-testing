@@ -1,5 +1,20 @@
 # Software Testing
 
+<!-- toc -->
+
+    ## [Jest vs React Testing Library](#jest-vs-react-testing-library)
+      ## [Jest](#jest)
+      ## [React Testing Library](#react-testing-library)
+## [Test Driven Development](#test-driven-development)
+## [Jest Watch Mode](#jest-watch-mode)
+## [Jest Filtering Tests](#jest-filtering-tests)
+## [Naming Conventions](#naming-conventions)
+## [Code Coverage](#code-coverage)
+## [Assertions](#assertions)
+## [RTL Queries](#rtl-queries)
+
+<!-- tocstop -->
+
 ### Jest vs React Testing Library
 
 When it comes to testing React applications, two popular choices are Jest and React Testing Library. Here's a comparison between the two:
@@ -111,6 +126,7 @@ npm test -- --coverage
 
 - Jest provides a number of built-in assertions that can be used to test the behavior of your code. This can be useful for writing tests that are easy to read and maintain.
 - To use an assertion, you can use the expect function followed by the assertion you want to make. For example:
+
 ```
 expect(value).toBe(expectedValue);
 expect(value).toEqual(expectedValue);
@@ -140,7 +156,7 @@ expect(value).toHaveProperty(keyPath, value?);
 
 ```
 screen.getByText(text);
-screen.getByLabelText(text);  
+screen.getByLabelText(text);
 screen.getByPlaceholderText(text);
 screen.getByAltText(text);
 screen.getByTitle(text);

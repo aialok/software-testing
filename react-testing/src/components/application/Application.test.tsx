@@ -36,7 +36,7 @@ describe("Test for application component", () => {
     const para = screen.getByTitle("close");
     expect(para).toBeInTheDocument();
 
-    const image = screen.getByRole('img')
+    const image = screen.getByRole("img");
     expect(image).toBeInTheDocument();
   });
 });
