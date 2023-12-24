@@ -1,0 +1,19 @@
+#!/bin/sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo 'Running pre-commit'
+
+# Run update-toc and store the exit code
+npm run update-toc
+UPDATE_TOC_EXIT_CODE=$?
+
+# Check if the update-toc command made changes
+if [ "$UPDATE_TOC_EXIT_CODE" -eq 0 ] && [ -n "$(git diff --exit-code)" ]; then
+  echo 'Committing changes'
+  git add README.md
+  git commit --amend --no-edit
+else
+  echo 'No changes to commit or update-toc failed'
+fi
+
+exit 0

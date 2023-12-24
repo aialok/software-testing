@@ -6,12 +6,13 @@
   "scripts": {
     "update-toc": "npx markdown-toc -i README.md --bullets \"-\"",
     "lint": "prettier --check .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "prepare": "husky install"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "husky": "^8.0.3",
+    "husky": "^8.0.0",
     "markdown-toc": "^1.2.0",
     "prettier": "^3.1.1"
   },

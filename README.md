@@ -1,11 +1,18 @@
 # Software Testing
 
 <!-- toc -->
-"husky": {
-  "hooks": {
-    "pre-commit": "echo 'Running pre-commit' && npm run update-toc && git add README.md && git commit --amend --no-edit"
-  }
-}
+
+- [Jest vs React Testing Library](#jest-vs-react-testing-library)
+  - [Jest](#jest)
+  - [React Testing Library](#react-testing-library)
+- [Test Driven Development](#test-driven-development)
+- [Jest Watch Mode](#jest-watch-mode)
+- [Jest Filtering Tests](#jest-filtering-tests)
+- [Naming Conventions](#naming-conventions)
+- [Code Coverage](#code-coverage)
+- [Assertions](#assertions)
+- [RTL Queries](#rtl-queries)
+
 <!-- tocstop -->
 
 # Jest vs React Testing Library
