@@ -3,10 +3,14 @@
   "version": "1.0.0",
   "description": "Jest vs React Testing Library",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "update-toc": "npx markdown-toc -i README.md --bullets \"-\""
+  },
   "author": "",
   "license": "ISC",
-  "dependencies": {
+  
+  "devDependencies": {
+    "husky": "^8.0.3",
     "markdown-toc": "^1.2.0"
   }
 }
