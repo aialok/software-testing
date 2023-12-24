@@ -8,9 +8,13 @@
   },
   "author": "",
   "license": "ISC",
-  
   "devDependencies": {
     "husky": "^8.0.3",
     "markdown-toc": "^1.2.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run update-toc && git add README.md && git commit --amend --no-edit"
+    }
   }
 }
