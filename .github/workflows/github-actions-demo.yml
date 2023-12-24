@@ -9,10 +9,13 @@ jobs:
   update-toc:
     runs-on: ubuntu-latest
 
+    env:
+      REPO_TOKEN : ${{ secrets.GITHUB_TOKEN }}
+
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2 
-        
+        uses: actions/checkout@v2
+
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
@@ -36,4 +39,4 @@ jobs:
           git config --local user.name "GitHub Actions"
           git add README.md
           git commit -m "Update TOC"
-          git push
+          git push origin master
