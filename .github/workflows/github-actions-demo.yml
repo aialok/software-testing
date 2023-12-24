@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      REPO_TOKEN : ${{ secrets.GITHUB_TOKEN }}
+      REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     steps:
       - name: Checkout repository
@@ -26,9 +26,6 @@ jobs:
 
       - name: Update TOC
         run: npx markdown-toc -i README.md --bullets "-"
-
-      - name: Force change in README.md
-        run: echo "Triggering change to force Git commit" >> README.md
 
       - name: Check Git status
         run: git status
