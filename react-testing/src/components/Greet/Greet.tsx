@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function Greet() {
-  return (
-    <div>Hello, Alok Gupta</div>
-  )
+  return <div>Hello, Alok Gupta</div>;
 }
 
-export default Greet
+export default Greet;

@@ -4,17 +4,23 @@
   "description": "Jest vs React Testing Library",
   "main": "index.js",
   "scripts": {
-    "update-toc": "npx markdown-toc -i README.md --bullets \"-\""
+    "update-toc": "npx markdown-toc -i README.md --bullets \"-\"",
+    "lint": "prettier --check .",
+    "format": "prettier --write ."
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "husky": "^8.0.3",
-    "markdown-toc": "^1.2.0"
+    "markdown-toc": "^1.2.0",
+    "prettier": "^3.1.1"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "echo 'Running pre-commit' && npm run update-toc && git add README.md && git commit --amend --no-edit"
+      "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "*": "prettier --write"
   }
 }

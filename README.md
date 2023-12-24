@@ -1,7 +1,11 @@
 # Software Testing
 
 <!-- toc -->
-
+"husky": {
+  "hooks": {
+    "pre-commit": "echo 'Running pre-commit' && npm run update-toc && git add README.md && git commit --amend --no-edit"
+  }
+}
 <!-- tocstop -->
 
 # Jest vs React Testing Library
@@ -193,4 +197,5 @@ screen.findAllByDisplayValue(value);
 screen.findAllByRole(role, options?);
 screen.findAllByTestId(id);
 ```
+
 Triggering change to force Git commit

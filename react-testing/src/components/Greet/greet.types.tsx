@@ -1,4 +1,3 @@
 type helloProp = {
-    names?: String
-}
-
+  names?: String;
+};
