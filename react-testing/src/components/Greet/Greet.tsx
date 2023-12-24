@@ -2,7 +2,7 @@ import React from 'react'
 
 function Greet() {
   return (
-    <div>Hello, Alok</div>
+    <div>Hello, Alok Gupta</div>
   )
 }
 

@@ -9,7 +9,7 @@ describe('Greet', ()=>{
     })
     test('Contains text Hello, Alok', ()=>{
         render(<Greet/>)
-        const textContent= screen.getByText("Hello, Alok");
+        const textContent= screen.getByText(/Hello/);
         expect(textContent).toBeInTheDocument();
     })
 

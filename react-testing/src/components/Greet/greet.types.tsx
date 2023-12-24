@@ -1,0 +1,4 @@
+type helloProp = {
+    names?: String
+}
+
