@@ -23,8 +23,5 @@
       "post-applypatch": "echo \"[Husky] post-applypatch\"",
       "pre-commit": "echo \"[Husky] pre-commit\""
     }
-  },
-  "lint-staged": {
-    "*": "prettier --write"
   }
 }

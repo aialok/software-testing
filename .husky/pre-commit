@@ -13,7 +13,7 @@ if [ "$UPDATE_TOC_EXIT_CODE" -eq 0 ] && [ -n "$(git diff --exit-code)" ]; then
   git add README.md
   git commit --amend --no-edit
 else
-  echo 'No changes to commit or update-toc failed'
+  echo 'No changes to commit'
 fi
 
 exit 0

@@ -2,7 +2,7 @@
 
 <!-- toc -->
 
-- [Jest vs React Testing Library](#jest-vs-react-testing-library)
+- [Jest vs React](#jest-vs-react)
   - [Jest](#jest)
   - [React Testing Library](#react-testing-library)
 - [Test Driven Development](#test-driven-development)
@@ -12,10 +12,11 @@
 - [Code Coverage](#code-coverage)
 - [Assertions](#assertions)
 - [RTL Queries](#rtl-queries)
+- [This is a test](#this-is-a-test)
 
 <!-- tocstop -->
 
-# Jest vs React Testing Library
+# Jest vs React
 
 When it comes to testing React applications, two popular choices are Jest and React Testing Library. Here's a comparison between the two:
 
@@ -206,3 +207,5 @@ screen.findAllByTestId(id);
 ```
 
 Triggering change to force Git commit
+
+# This is a test
