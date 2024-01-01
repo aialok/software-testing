@@ -7,6 +7,7 @@ export const Application = () => {
       <span title="close">X</span>
       <img src="https://via.placeholder.com/150" alt="a person with a laptop" />
       <div data-testid="custom-element">Custom HTML element</div>
+      <span data-testid="custom-element-2">Custom HTML Element-2</span>
       <form>
         <div>
           <label htmlFor="name">Name</label>
