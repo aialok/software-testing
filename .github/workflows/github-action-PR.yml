@@ -14,7 +14,6 @@ jobs:
         run: |
           # Retrieve the complete branch name directly from the GitHub context
           FULL_BRANCH_NAME=${{ github.head_ref }}
-          echo "Current Branch: $FULL_BRANCH_NAME"
           
           # Extract just the branch name without the 'refs/heads/' prefix
           BRANCH_NAME=$(basename $FULL_BRANCH_NAME)
@@ -26,6 +25,6 @@ jobs:
           # Navigate to the cloned repository
           cd talawa-admin
 
-          # Print the file list of the Palisadoes Foundation repository
-          echo "File List of Palisadoes Foundation Repository:"
-          ls -la
+          # Print the content of the schema.graphql file in the root directory
+          echo "Content of schema.graphql:"
+          cat schema.graphql
