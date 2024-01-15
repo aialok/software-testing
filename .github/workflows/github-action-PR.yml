@@ -3,7 +3,7 @@ name: Clone Repository Workflow
 on:
   pull_request:
     branches:
-      - '*'
+      - "*"
 
 jobs:
   clone_repository:
@@ -15,17 +15,16 @@ jobs:
 
       - name: Print current branch
         run: |
-          # Extract the branch name from the pull request ref
-          branch_name=$(echo "${{ github.ref }}" | awk -F'/' '{print $4}')
-          echo "Current branch: $branch_name"
+          # Print the full Git ref (including the branch name, tag name, or pull request ref)
+          echo "Current branch: ${{github.event.pull_request.head.ref }}"
 
       - name: Clone different repository
         run: |
           # Clone the specified repository
           git clone https://github.com/PalisadoesFoundation/talawa-api.git
-          
+
           # Navigate into the cloned repository
           cd repository
-          
+
           # Checkout the branch corresponding to the pull request's head reference
           git checkout ${{ github.head_ref }}
