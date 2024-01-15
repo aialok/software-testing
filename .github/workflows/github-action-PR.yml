@@ -10,13 +10,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name : Get Branch Name
-        id : branch-names
-        uses: tj-actions/branch-names@v8
-
-      - name : Get Base Ref branch names (i.e The target of a pull request.)
-        run : |
-            echo "${{ steps.branch-names.outputs.base_ref_branch }}" 
-       
-     
-      
+      - name: Clone Repository
+        run: |
+          # Retrieve the complete branch name directly from the GitHub context
+          FULL_BRANCH_NAME=${{ github.head_ref }}
+          
+          # Extract just the branch name without the 'refs/heads/' prefix
+          BRANCH_NAME=$(basename $FULL_BRANCH_NAME)
+          
+          # Clone the specified repository using the extracted branch name
+          git clone --branch $BRANCH_NAME https://github.com/PalisadoesFoundation/talawa-admin.git
