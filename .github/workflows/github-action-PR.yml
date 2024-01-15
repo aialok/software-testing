@@ -15,8 +15,9 @@ jobs:
 
       - name: Print current branch
         run: |
-          # Print the full Git ref (including the branch name, tag name, or pull request ref)
-          echo "Current branch: ${{ github.ref }}"
+          # Extract the branch name from the pull request ref
+          branch_name=$(echo "${{ github.ref }}" | awk -F'/' '{print $4}')
+          echo "Current branch: $branch_name"
 
       - name: Clone different repository
         run: |
