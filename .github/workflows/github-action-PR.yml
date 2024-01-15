@@ -10,21 +10,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout current repository
-        uses: actions/checkout@v2
+      - name : Get Branch Name
+        id : branch-names
+        uses: tj-actions/branch-names@v8
 
-      - name: Print current branch
-        run: |
-          # Print the full Git ref (including the branch name, tag name, or pull request ref)
-          echo "Current branch: ${{github.base_ref }}"
-
-      - name: Clone different repository
-        run: |
-          # Clone the specified repository
-          git clone https://github.com/PalisadoesFoundation/talawa-api.git
-
-          # Navigate into the cloned repository
-          cd repository
-
-          # Checkout the branch corresponding to the pull request's head reference
-          git checkout ${{ github.head_ref }}
+      - name : Get Base Ref branch names (i.e The target of a pull request.)
+        run : |
+            echo "${{ steps.branch-names.outputs.base_ref_branch }}" 
+       
+     
+      
