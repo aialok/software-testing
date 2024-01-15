@@ -1,0 +1,30 @@
+name: Clone Repository Workflow
+
+on:
+  pull_request:
+    branches:
+      - '*'
+
+jobs:
+  clone_repository:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout current repository
+        uses: actions/checkout@v2
+
+      - name: Print current branch
+        run: |
+          # Print the full Git ref (including the branch name, tag name, or pull request ref)
+          echo "Current branch: ${{ github.ref }}"
+
+      - name: Clone different repository
+        run: |
+          # Clone the specified repository
+          git clone https://github.com/PalisadoesFoundation/talawa-api.git
+          
+          # Navigate into the cloned repository
+          cd repository
+          
+          # Checkout the branch corresponding to the pull request's head reference
+          git checkout ${{ github.head_ref }}
