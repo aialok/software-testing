@@ -11,4 +11,4 @@ jobs:
 
     steps:
       - name: Print Branch
-        run: echo "The branch name is ${GITHUB_REF#refs/heads/}"
+        run: echo "The branch name is ${github.ref#refs/heads/}"
