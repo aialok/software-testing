@@ -13,7 +13,7 @@ jobs:
       - name: Clone Repository
         run: |
           # Retrieve the complete branch name directly from the GitHub context
-          FULL_BRANCH_NAME=${{ github.head_ref }}
+          FULL_BRANCH_NAME=${{ github.base_ref }}
           echo "FULL Branch: $FULL_BRANCH_NAME"
           
           # Extract just the branch name without the 'refs/heads/' prefix
